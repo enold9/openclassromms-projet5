@@ -1,7 +1,7 @@
 {
   "name": "kasa",
   "private": true,
-  "homepage":"https://enold9.github.io/openclassromms-projet5.git",
+  "homepage": "https://enold9.github.io/openclassromms-projet5.git",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -29,6 +29,7 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "gh-pages": "^6.3.0",
     "globals": "^16.3.0",
+    "sass-embedded": "^1.89.2",
     "vite": "^7.0.4"
   }
 }

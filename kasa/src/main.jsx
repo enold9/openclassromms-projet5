@@ -13,12 +13,14 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
       <GlobalStyle />
-      <Banner />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/A-propos" element={<Apropos />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+      <div className='container'>
+        <Banner />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/A-propos" element={<Apropos />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </div>
       <Footer />
     </Router>
   </StrictMode>,
