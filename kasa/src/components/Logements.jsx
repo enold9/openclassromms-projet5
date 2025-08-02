@@ -1,24 +1,20 @@
 const reponse = await fetch('http://localhost:5173/logements.json')
 const logements = await reponse.json()
-import styled from 'styled-components'
+import { Link } from 'react-router'
 
-const Image = styled.img`
-  width: 300px;
-`
-
-const List = styled.ul`
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-`
 
 function Logements(){
     return(
-            <List>
+            <ul className='card'>
                 {logements.map((logement,i)=>
-                    <li key={i}><Image src={logement.cover}/>{logement.title}</li>
+                    <Link to={`/logement/${i}`}>
+                        <li key={i}>
+                            <span>{logement.title}</span>
+                            <img src={logement.cover}/>
+                        </li>
+                    </Link>
                 )}
-            </List>
+            </ul>
     )
 }
 

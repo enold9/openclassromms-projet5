@@ -7,6 +7,8 @@ import Apropos from './pages/a-propos'
 import Footer from './components/Footer'
 import GlobalStyle from './GlobalStyle'
 import Error from './components/Error'
+import Logement from './pages/logement'
+
 
 
 createRoot(document.getElementById('root')).render(
@@ -19,6 +21,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/" element={<Home />} />
           <Route path="/A-propos" element={<Apropos />} />
           <Route path="*" element={<Error />} />
+          <Route path="/logement/:pageNumber" element={<Logement />}/>
         </Routes>
       </div>
       <Footer />
