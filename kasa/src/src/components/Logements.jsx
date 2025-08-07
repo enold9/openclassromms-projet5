@@ -1,4 +1,4 @@
-const reponse = await fetch('http://localhost:5173/logements.json')
+const reponse = await fetch('/logements.json')
 const logements = await reponse.json()
 import { Link } from 'react-router'
 

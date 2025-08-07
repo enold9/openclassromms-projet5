@@ -2,7 +2,7 @@ import { useParams } from 'react-router'
 import { useState } from 'react'
 import Propos from '../components/Propos'
 import Error from '../components/Error'
-const reponse = await fetch('http://localhost:5173/logements.json')
+const reponse = await fetch('/logements.json')
 const logements = await reponse.json()
 
 function Logement(){
