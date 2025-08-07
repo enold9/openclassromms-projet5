@@ -12,21 +12,33 @@ $grey: #F6F6F673;
    max-width: 1240px;
    justify-self: center;
    width: 100%;
+   @media (max-width: 430px) {
+    padding-top: 20px;
+  }
 }
 
 nav{
   margin: 50px 100px;
   width: 100%;
   justify-self: center;
+  font-size: 24px;
+  @media (max-width: 430px) {
+    margin: 0 0 20px 0;
+    font-size: 12px;
+  }
   img{
     height: 68px;
     width: 210px;
+    @media (max-width: 430px) {
+    width: 39%;
+    height: auto;
+    padding-left: 20px;
+  }
   }
   a{
     padding: 10px;
     color: black;
     text-decoration: none;
-    font-size: 24px;
     text-align: center;
   }
   a:focus{
@@ -41,28 +53,43 @@ nav{
   font-size: 36px;
   color: $red;
   justify-content: space-around;
-  height: 68vh;
+  height: 50vh;
+  @media (max-width: 430px) {
+    font-size: 18px;
+    height: 80vh;
+    padding: 0 20px;
+  }
 }
 
 .error-img{
   width: 80%;
   max-width: 597px;
+  @media (max-width: 430px) {
+    width: 50%;
+  }
 }
 
 .error-link{
   font-size: 18px;
+  @media (max-width: 430px) {
+    font-size: 14px;
+  }
 }
 
 footer{
   width: 100%;
   position: fixed;
   bottom: 0;
-  padding: 30px;
+  height: 180px;
   color: white;
   background-color: black;
   text-align: center;
+  align-content: center;
   font-size: 24px;
   z-index: 100;
+  @media (max-width: 430px) {
+    font-size: 12px;
+  }
   img{
     height: 40px;
     width: 122px;
@@ -75,6 +102,10 @@ footer{
   border-radius: 20px;
   height: 15vh;
   align-content: center;
+  @media (max-width: 430px) {
+    margin: 0 20px;
+    border-radius: 10px;
+  }
     &__home{
       @include bg-img('../assets/images/landscape1.jpg', 0.5)
     }
@@ -86,6 +117,9 @@ footer{
 .title-text{
   font-size: 48px;
   color: white;
+  @media (max-width: 675px) {
+    font-size: 24px;
+  }
 }
 
 .about{
@@ -104,11 +138,18 @@ footer{
   border-radius: 5px;
   padding: 10px;
   margin-top: 32px;
+  @media (max-width: 430px) {
+    margin-top: 20px;
+    font-size: 13px;
+  }
   input{
     appearance: none;
     font-size: 24px;
     color: white;
     transition: 0.5s;
+    @media (max-width: 430px) {
+    font-size: 10px;
+  }
   }
   input:checked{
     transform: rotate(-180deg);
@@ -119,14 +160,25 @@ footer{
   background-color: $grey;
   font-size: 18px;
   overflow: hidden;
-  transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-  max-height: 100px;
+  transition: max-height 0.7s cubic-bezier(0.4, 0.3, 0.4, 1);
   align-content: center;
   padding: 0 15px;
+  @media (max-width: 500px) {
+    font-size: 12px;
+  }
 }
 
 .description-open {
   max-height: 100px;
+  @media (max-width: 830px) {
+   max-height: 122px;
+  }
+  @media (max-width: 730px) {
+    max-height: 144px;
+  }
+  @media (max-width: 647px) {
+    max-height: 168px;
+  }
 }
 
 .description-closed {
@@ -147,8 +199,9 @@ ul{
   background-color: $grey;
   justify-self: center;
   justify-content: space-evenly;
-  padding-bottom: 30px;
-  border-radius: 20px;
+  @media (max-width: 560px) {
+    border-radius: 10px;
+  }
   a{
     text-decoration: none;
     color: white;
@@ -158,12 +211,18 @@ ul{
     width: 300px;
     height: 300px;
     overflow: hidden;
+    @media (max-width: 430px) {
+      height: 255px;
+    }
     img{
       position: relative;
       top: -300px;
       z-index: 1;
       border-radius: 10px;
       filter: brightness(0.9);
+      @media (max-width: 430px) {
+        top: -255px;
+      }
     }
     span{
       position: relative;
@@ -174,12 +233,20 @@ ul{
       align-content: end;
       bottom: 10px;
       z-index: 2;
+      @media (max-width: 430px) {
+        height: 255px;
+      }
     }
   }
 }
 
 .logement{
   margin-bottom: 200px;
+  width: 100%;
+  @media (max-width: 430px) {
+    padding: 0 5%;
+    width: 90%;
+  }
 }
 
 .caroussel-container{
@@ -187,6 +254,21 @@ ul{
   height: 415px;
   border-radius: 20px;
   overflow: hidden;
+  text-align: center;
+  color: white;
+  @media (max-width: 430px) {
+    height: 255px;
+  }
+}
+
+.caroussel-image-number{
+  position: relative;
+  top: 90%;
+  z-index: 1;
+  font-size: 18px;
+  @media (max-width: 430px) {
+      display: none;
+    }
 }
 
 .caroussel-btn-container{
@@ -196,27 +278,36 @@ ul{
   top: 50%;
   height: 0;
   z-index: 1;
+  @media (max-width: 430px) {
+      margin: 0;
+    }
 }
 
 .caroussel-btn{
   font-size: 80px;
-  color: white;
   background: none;
   border: none;
+  color: white;
+  @media (max-width: 430px) {
+      font-size: 20px;
+    }
 }
 
 .caroussel-img-container{
   display: none;
 }
 
-.caroussel-img {
-  position: relative;
-  bottom: 212px;
-}
 .caroussel-img-container.active {
+  display: flex;
+  justify-content: center;
   position: relative;
-  top: 50%;
-  display: block;
+  top: -168px;
+  height: 100vh;
+}
+
+.caroussel-img{
+  width: 100%;
+  object-fit: cover;
 }
 
 .img-fit{
@@ -230,6 +321,7 @@ ul{
   gap: 10px;
   color: white;
   font-size: 14px;
+  flex-wrap: wrap;
   li{
     background-color: $red;
     border-radius: 10px;
@@ -238,6 +330,12 @@ ul{
     height: 25px;
     text-align: center;
     align-content: center;
+    @media (max-width: 430px) {
+      font-size: 10px;
+      height: 18px;
+      min-width: 84px;
+      border-radius: 5px;
+    }
   }
 }
 
@@ -249,11 +347,19 @@ ul{
   &__red{
     color: $red;
   }
+  @media (max-width: 430px) {
+      font-size: 13px;
+    }
 }
 
 .host{
   text-align: right;
   color: $red;
+  font-size: 18px;
+  @media (max-width: 430px) {
+      font-size: 12px;
+      flex-direction: row !important;
+    }
 }
 
 .host-container{
@@ -262,6 +368,10 @@ ul{
   width: 64px;
   border-radius: 32px;
   overflow: hidden ;
+  @media (max-width: 430px) {
+      height: 32px;
+      width: 32px;
+    }
 }
 
 .flexMirror{
@@ -271,14 +381,39 @@ ul{
   padding: 0 10px;
 }
 
+.logement-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 144px;
+  &__host{
+    @media (max-width: 430px){
+      flex-direction: row-reverse;
+      width: 100%;
+      align-items: center;
+      min-height: 40px;
+    }
+  }
+  @media (max-width: 430px){
+      min-height: 40px;
+    }
+}
+
 .logement-title{
   h1{
     color: $red;
     font-size: 36px;
     font-weight: 100;
+    margin-bottom: 0;
+    @media (max-width: 430px) {
+      font-size: 18px;
+    }
   }
   p{
     font-size: 18px;
+    @media (max-width: 430px) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -288,5 +423,20 @@ ul{
   padding: 0 10px;
   li{
     width: 47%;
+    @media (max-width: 430px) {
+      width: 100%;
+    }
   }
+  @media (max-width: 430px) {
+      flex-direction: column;
+    }
+}
+
+@media (max-width: 430px) {
+      .logement-description .rolling-text{
+        width: 100%;
+      }
+      .logement > .flexMirror{  
+        flex-direction: column;
+      }
 }
