@@ -4,6 +4,9 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/openclassromms-projet5'
-  // base: '/'
+  base: '/openclassromms-projet5/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets'
+  }
 })

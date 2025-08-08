@@ -1,14 +1,13 @@
 import Propos from "../components/Propos"
-const reponse = await fetch('http://localhost:5173/Apropos.json')
-const propos = await reponse.json()
+// Import direct du fichier JSON depuis src/data/
+import proposData from '../data/Apropos.json'
 
 function Apropos(){
-    
     return(
         <div>
             <div className="title title__propos"></div>
             <ul className="about">
-                {propos.map((x, i)=>(
+                {proposData.map((x, i)=>(
                     <Propos key={i} propos={x.title} description={x.text}/>
                 ))}
             </ul>

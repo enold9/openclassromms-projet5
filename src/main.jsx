@@ -9,19 +9,17 @@ import GlobalStyle from './GlobalStyle'
 import Error from './components/Error'
 import Logement from './pages/logement'
 
-
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <GlobalStyle />
       <div className='container'>
         <Banner />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/A-propos" element={<Apropos />} />
-          <Route path="*" element={<Error />} />
           <Route path="/logement/:pageNumber" element={<Logement />}/>
+          <Route path="*" element={<Error />} />
         </Routes>
       </div>
       <Footer />
