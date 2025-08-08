@@ -172,10 +172,7 @@ footer{
 }
 
 .description-open {
-  max-height: 100px;
-  @media (max-width: 830px) {
-   max-height: 122px;
-  }
+  max-height: 125px;
   @media (max-width: 730px) {
     max-height: 144px;
   }
