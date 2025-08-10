@@ -5,7 +5,7 @@ import logementsData from '../data/logements.json'
 function Logements(){
     return(
             <ul className='card'>
-                {logementsData.map((logement, i) =>
+                {logementsData.map((logement) =>
                     <li key={logement.id}> {/* Utilisez logement.id au lieu de i pour une meilleure performance */}
                         <Link to={`/logement/${logement.id}`}> {/* Utilisez logement.id au lieu de i */}
                             <span>{logement.title}</span>

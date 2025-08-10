@@ -150,12 +150,15 @@ footer{
     font-size: 24px;
     color: white;
     transition: 0.5s;
+    &:hover{
+      cursor: pointer;
+    }
+    &:checked{
+    transform: rotate(-180deg);
+    }
     @media (max-width: 430px) {
     font-size: 10px;
-  }
-  }
-  input:checked{
-    transform: rotate(-180deg);
+    }
   }
 }
 
@@ -291,16 +294,19 @@ ul{
   background: none;
   border: none;
   color: white;
+  &:hover{
+    cursor: pointer;
+  }
   @media (max-width: 430px) {
       font-size: 20px;
     }
 }
 
-.caroussel-img-container{
-  display: none;
+.hidden{
+  display: none !important;
 }
 
-.caroussel-img-container.active {
+.caroussel-img-container{
   display: flex;
   justify-content: center;
   position: relative;
@@ -310,6 +316,7 @@ ul{
 
 .caroussel-img{
   width: 100%;
+  max-height: 45%;
   object-fit: cover;
 }
 
