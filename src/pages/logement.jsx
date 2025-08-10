@@ -22,7 +22,7 @@ function Logement(){
         setCurrentImage((prev) => (prev + 1) % logement.pictures.length);
     }
 
-    // Si le logement n'existe pas, afficher la page d'erreur
+    // Si le logement n'existe pas, afficher la page d'erreur 
     if(!logement){
         return <Error />
     }
