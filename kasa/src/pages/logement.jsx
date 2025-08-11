@@ -28,10 +28,10 @@ function Logement(){
                         <button className='fa-solid fa-chevron-left caroussel-btn' id='prev' onClick={previousImage}></button>
                         <button className='fa-solid fa-chevron-right caroussel-btn' id='nxt' onClick={nextImage}></button>
                     </div>
-                    <span className={`caroussel-image-number ${logement.pictures.length === 1 ? 'hidden' : ''}`}>{currentImage + 1}/{logement.pictures.length}</span>
+                    <span className="caroussel-image-number">{currentImage + 1}/{logement.pictures.length}</span>
                     <ul>
                         {logement.pictures.map((picture, i)=>
-                            <li key={i} className={`caroussel-img-container ${i === currentImage ? '' : 'hidden'}`}>
+                            <li key={i} className={`caroussel-img-container${i === currentImage ? ' active' : ''}`}>
                                 <img src={picture} className='caroussel-img'/>
                             </li>
                         )}
